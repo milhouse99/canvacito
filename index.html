@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{
+        margin: 0; 
+        overflow:hidden;
+        /*background-color: rgb(75,0,130);*/
+    }
+    #tableau{
+        border: 1px solid black;
+        /*background-color: #130f40;*/
+    }
+    
+    </style>
+</head>
+
+<body >
+        <canvas id="tableau" ></canvas>
+    <script>
+        var canvas=document.getElementById('tableau');
+        var contexte=tableau.getContext('2d');
+        
+        width=window.innerWidth,
+        height=window.innerHeight;
+        tableau.width=width;
+        tableau.height=height;
+      
+        contexte.fillRect(50,120,300,150);
+        contexte.fillStyle = "rgb (255, 128, 0)";
+         contexte.beginPath();
+        // contexte.lineWidth='5';
+        // contexte.strokeStyle='#4c8';
+        // contexte.arc(85, 100, 50 , 0,Math.PI);
+        // contexte.stroke();
+
+        // contexte.arc(95, 200, 50 , 0,2*Math.PI);
+        // contexte.stroke();
+
+// /*cercleexterieur*/
+//         contexte.beginPath();
+//         contexte.lineWidth='8';
+//         contexte.strokeStyle='rgba(0, 0, 255, 0.2)';
+//         contexte.arc(200, 300, 50 , 0,2*Math.PI);
+//         contexte.stroke();
+//         /*cercledeux*/
+//         contexte.beginPath();
+//         contexte.lineWidth='6';
+//         contexte.strokeStyle='rgba(0, 0, 255, 0.5)';
+//         contexte.arc(200, 300, 44 , 0, 2*Math.PI);
+//         contexte.stroke();
+//         /*cerclemilieu*/
+//         contexte.beginPath();
+//         contexte.lineWidth='8';
+//         contexte.fillStyle='rgba(0, 0, 255, 0.7)';
+//         contexte.arc(200, 300, 41 , 0, 2*Math.PI);
+//         contexte.fill();
+//         /*yeux*/
+//         contexte.beginPath();
+//         contexte.lineWidth='8';
+//         contexte.fillStyle='rgba(255, 255, 255, 1)';
+//         contexte.arc(180, 300, 10 , 0, 2*Math.PI);
+//         contexte.fill();
+//         contexte.beginPath();
+
+//         contexte.lineWidth='8';
+//         contexte.fillStyle='rgba(255, 255, 255, 1)';
+//         contexte.arc(220, 300, 10 , 0, 2*Math.PI);
+//         contexte.fill();
+//         /*bouche*/
+//         contexte.beginPath();
+//         contexte.lineWidth='5';
+//         contexte.fillStyle='rgba(255, 255, 255, 0.5)';
+//         contexte.arc(200, 312, 10 , 0,Math.PI);
+//         contexte.fill();
+
+/*rayons*/
+        // contexte.beginPath();
+        // contexte.fillStyle='rgba(0, 0, 255, 0.4)';
+        // contexte.fillRect(240, 300, 130, 8 );
+
+        // contexte.beginPath();
+        // contexte.fillStyle='rgba(0, 0, 255, 0.4)';
+        // contexte.fillRect(30, 300, 130, 8 );
+
+        // contexte.beginPath();
+        // contexte.fillStyle='rgba(0, 0, 255, 0.4)';
+        // contexte.fillRect(196, 184, 5, 75 );
+
+        // contexte.beginPath();
+        // contexte.fillStyle='rgba(0, 0, 255, 0.4)';
+        // contexte.fillRect(196, 340, 5, 75 );
+/*orbite*/
+    //    contexte.beginPath();
+    //     contexte.lineWidth='2';
+    //     contexte.strokeStyle='rgba(255, 255, 255, 0.2)';
+    //     contexte.arc(800, 300, 200 , 0,2*Math.PI);
+    //     contexte.stroke();
+
+    //     contexte.beginPath();
+    //     contexte.lineWidth='1';
+    //     contexte.strokeStyle='rgba(0, 0, 0, 0.2)';
+    //     contexte.arc(800, 300, 100 , 0,2*Math.PI);
+    //     contexte.stroke();
+
+    //     contexte.beginPath();
+    //     contexte.lineWidth='1';
+    //     contexte.strokeStyle='rgba(0, 0, 0, 0.2)';
+    //     contexte.arc(800, 300, 150 , 0,2*Math.PI);
+    //     contexte.stroke();
+
+    //     contexte.beginPath();
+    //     contexte.lineWidth='2';
+    //     contexte.strokeStyle='rgba(0, 0, 0, 0.2)';
+    //     contexte.arc(800, 300, 250 , 0,2*Math.PI);
+    //     contexte.stroke();
+    //     /*soleil*/
+    //     contexte.beginPath();
+    //     contexte.lineWidth='8';
+    //     contexte.fillStyle='rgba(255,255,0,0.8)';
+    //     contexte.arc(800, 300, 41 , 0, 2*Math.PI);
+    //     contexte.fill();
+    //     /*planetes*/
+    //     contexte.beginPath();
+    //     contexte.lineWidth='8';
+    //     contexte.fillStyle='rgba(119,136,153)';
+    //     contexte.arc(702, 300, 10 , 0, 2*Math.PI);
+    //     contexte.fill();
+
+    //     contexte.beginPath();
+    //     contexte.lineWidth='8';
+    //     contexte.fillStyle='rgba(47,79,79)';
+    //     contexte.arc(690, 392, 15 , 0, 2*Math.PI);
+    //     contexte.fill();
+        
+    //     contexte.beginPath();
+    //     contexte.lineWidth='8';
+    //     contexte.fillStyle='rgba(0,0,139)';
+    //     contexte.arc(690, 465, 15 , 0, 2*Math.PI);
+    //     contexte.fill();
+        
+    //     contexte.beginPath();
+        
+    //     contexte.fillStyle='rgba(255,0,0)';
+    //     contexte.arc(690, 78, 15 , 0, 2*Math.PI);
+    //     contexte.fill();
+/*triangle*/
+        // contexte.beginPath();
+        // contexte.lineWidth='2';
+        // contexte.moveTo(250, 250);
+        // contexte.lineTo(250, 600);
+        // contexte.lineTo(600, 300 );
+        // contexte.closePath();
+        // contexte.strokeStyle='rgba(47,79,79, 0.2)';
+        // contexte.stroke();
+        
+        
+
+        // contexte.beginPath();
+        // contexte.lineWidth='2';
+        // contexte.moveTo(150, 250);
+        // contexte.lineTo(250, 600);
+        // contexte.lineTo(600, 350 );
+        // contexte.closePath();
+        // contexte.strokeStyle='rgba(47,79,79, 0.2)';
+        // contexte.stroke();
+
+
+
+
+
+        
+
+/*champagtricole*/
+        contexte.fillStyle = 'rgb(80, 200, 120)';
+        contexte.fillRect(150,120,800,150);
+ 
+/*route*/
+contexte.fillStyle='#48494B';
+contexte.fillRect(350,120,20,150);
+/*route verticale*/
+contexte.fillStyle='#48494B';
+contexte.fillRect(150,200,400,20);
+
+       contexte.beginPath;
+         contexte.arc(480, 175, 20 , 0,2*Math.PI);
+         contexte.strokeStyle='#48494B';
+         contexte.stroke();
+         
+         contexte.fill();
+/*ligneblanche*/
+contexte.fillStyle='white';
+contexte.fillRect(150,207,400,2.5);
+/*fumeee*/
+contexte.fillStyle='grey';
+contexte.fillRect(135,137,70,2.5);
+contexte.fillStyle='grey';
+contexte.fillRect(135,107,70,2.5);
+/*terre*/
+contexte.fillStyle='#7F461B';
+contexte.fillRect(340,120,10,80);
+contexte.fillStyle='#7F461B';
+contexte.fillRect(340,220,10,50);
+/*champAgricole jaune*/
+contexte.fillStyle='#FFF200';
+contexte.fillRect(370,120,90,80);
+contexte.fillStyle='#0B6623';
+contexte.fillRect(460,120,90,80);
+/*nuages*/
+
+contexte.beginPath();
+         contexte.lineWidth='8';
+         contexte.fillStyle='rgba(224, 224, 255, 0.5)';
+         contexte.arc(460, 150, 20 , 0,2*Math.PI);
+        contexte.fillStyle='rgba(224, 224, 255, 0.5)';
+         contexte.arc(480, 175, 20 , 0,2*Math.PI);
+         contexte.fillStyle='rgba(224, 224, 255, 0.5)';
+         contexte.fill();
+/*ombrevaisseau*/
+contexte.beginPath();
+        contexte.lineWidth='1';
+        contexte.moveTo(205,105);
+        contexte.lineTo(265,130);
+        contexte.lineTo(205,155);
+        contexte.lineTo(220,140);
+        contexte.lineTo(220,120);
+        contexte.closePath();
+        contexte.fillStyle='rgba(47,79,79, 0.2)';
+        contexte.fill();
+/*vaisseau*/
+        contexte.beginPath();
+        contexte.lineWidth='2';
+        contexte.moveTo(200, 100);
+        contexte.lineTo(260,125);
+        contexte.lineTo(200,150);
+        contexte.lineTo(215,135);
+        contexte.lineTo(215,115);
+        contexte.closePath();
+        contexte.fillStyle='rgb(47,79,79)';
+        contexte.fill();
+        contexte.strokeStyle='rgba(47,79,79, 0.2)';
+        contexte.stroke();
+        contexte.beginPath();
+        contexte.arc();
+        contexte.fillStyle();
+        contexte.fill();
+
+
+
+
+
+
+/*ombrevaisseau*/
+contexte.beginPath();
+        contexte.lineWidth='1';
+        contexte.moveTo(705,105);
+        contexte.lineTo(765,130);
+        contexte.lineTo(705,155);
+        contexte.lineTo(720,140);
+        contexte.lineTo(720,120);
+        contexte.closePath();
+        contexte.fillStyle='rgba(47,79,79, 0.2)';
+        contexte.fill();
+/*vaisseau*/
+        contexte.beginPath();
+        contexte.lineWidth='2';
+        contexte.moveTo(700, 100);
+        contexte.lineTo(760,125);
+        contexte.lineTo(700,150);
+        contexte.lineTo(715,135);
+        contexte.lineTo(715,115);
+        contexte.closePath();
+        contexte.fillStyle='rgb(47,79,79)';
+        contexte.fill();
+        contexte.strokeStyle='rgba(47,79,79, 0.2)';
+        contexte.stroke();
+
+
+var pic =new Image();
+
+pic.src="13withness8.jpg";
+
+
+
+
+
+        
+
+
+        
+
+        
+        
+
+        
+        
+        
+    </script>
+    
+</body>
+
+</html>

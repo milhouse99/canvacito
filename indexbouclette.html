@@ -1,0 +1,130 @@
+<!--Créer une grille repére afin de dessiner pixel par pixel avec des fonctions ou des boucles qui generent des lignes ou des zones completes-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>leçonOne</title>
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            overflow: hidden;
+            /*background-color: rgb(75,0,130);*/
+        }
+
+        #canvas {
+
+            left: 0px;
+            top: 0px;
+            right: 0;
+            bottom: 0;
+
+            /*background-color: #130f40;*/
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="1000" heigth="1000"></canvas>
+    <script>
+        var canvas;
+        var ctx;
+        window.addEventListener('load', function () {
+            canvas = document.getElementById('canvas');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            ctx = canvas.getContext('2d');
+            draw();
+            animate();
+        });
+
+var mouse={
+    x: undefined,
+    y: undefined
+}
+        window.addEventListener('mousemove',function(event){
+
+           mouse.x = event.x;
+           mouse.y = event.y;
+        //    console.log(mouse);
+        }
+        );
+        window.onkeydown=function(event){
+            console.log(event.keyCode);
+            if(event.keyCode==38);
+            console.log('c est bon la')
+        }
+       
+        
+            
+
+        
+
+
+
+
+
+        function draw() {
+             
+       
+        }
+        function circle(x,y){
+            this.x=x;
+            this.y=y;
+            this.draw=function () {
+                ctx.beginPath();
+            ctx.arc(x, y, radius, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(255,255 ,0 )';
+            ctx.fill();
+            
+
+            }
+
+        }
+
+        var x = Math.random() * innerWidth;
+        var y =Math.random() * innerHeight;
+        var dx = 2;
+        var dy = 9;
+        var radius = 30;
+        var circle=new circle(200,200);
+
+        function animate() {
+            requestAnimationFrame(animate);
+            ctx.clearRect(0, 0, innerWidth, innerHeight);
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, Math.PI * 2);
+            ctx.strokeStyle = 'rgba(0, 0, 255, 0.8)';
+            ctx.stroke();
+            circle.draw();
+
+          
+        
+            
+
+            if (x + radius > innerWidth || x - radius< 0) {
+                dx = -dx;
+            }
+            if(y + radius> innerHeight || y - radius< 0){
+                dy= -dy;
+
+            }
+            x+= dx;
+            y+= dy;
+            
+            // console.log('ça boucle '+x)
+
+            
+        } 
+    </script>
+</body>
+
+</html>
